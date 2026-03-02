@@ -1,0 +1,22 @@
+#!/bin/bash
+# Enable Bedrock integration
+export CLAUDE_CODE_USE_BEDROCK=1
+
+# Configure Uptimize API (use dev for development or p for production in URL as needed)
+export ANTHROPIC_BEDROCK_BASE_URL="https://api.nlp.dev.uptimize.merckgroup.com"
+
+# API key authentication
+export CLAUDE_CODE_SKIP_BEDROCK_AUTH=1
+export ANTHROPIC_AUTH_TOKEN="199360ed-71b5-47b4-86d8-7a798776c6aa"
+
+# Select models
+#export ANTHROPIC_MODEL=""
+export ANTHROPIC_MODEL="eu.anthropic.claude-sonnet-4-5-20250929-v1:0"
+#export ANTHROPIC_MODEL="anthropic.claude-sonnet-3-7-20250219-v1:0"
+export ANTHROPIC_SMALL_FAST_MODEL="us.anthropic.claude-3-5-haiku-20241022-v1:0"
+
+# Disable Telemetry to Anthropic
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+
+export CLAUDE_LOG_MAX_SIZE=50MB
+export CLAUDE_LOG_LEVEL=INFO
